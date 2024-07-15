@@ -23,6 +23,7 @@
     </nav>
     {{-- Nội dung --}}
     <div class="container mt-4">
+        @include('templates.error')
         @yield('content')
     </div>
 
@@ -33,7 +34,7 @@
                 DATPTPH25870
             </div>
             <div class="card-body">
-                <h5 class="card-title">ASSIGNMENT PHP3</h5>
+                <h5 class="card-title">Laravel PHP3</h5>
                 <p class="card-text"><a href="#">Facebook : Đạt Đạt</a></p>
                 <a href="#" class="btn btn-primary">ADD FRIEND</a>
             </div>
@@ -47,7 +48,7 @@
 <script src="{{asset('bootstrap/jquery/dist/jquery.min.js')}}"></script>
 <script src="{{asset('bootstrap/input-mask/jquery.inputmask.js')}}"></script>
 <script src="{{asset('bootstrap/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
-<script>
+{{-- <script>
     $(function(){
         function readURL(input, selector) {
             if (input.files && input.files[0]) {
@@ -62,6 +63,6 @@
             readURL(this, '#anh_the_preview');
         });
     });
-</script>
+</script> --}}
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 </html>
