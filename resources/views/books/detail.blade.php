@@ -9,7 +9,7 @@
         <li class="list-group-item">publication: {{$bookdetail->publication}}</li>
         <li class="list-group-item">price: {{$bookdetail->price}}</li>
         <li class="list-group-item">quality: {{$bookdetail->quality}}</li>
-        <li class="list-group-item">category: {{$catename->name}}</li>  
+        <li class="list-group-item">category_id: {{$bookdetail->category_id}}</li>
       </ul>
 
 @endsection

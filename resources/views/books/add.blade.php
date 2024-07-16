@@ -5,51 +5,37 @@
         @csrf
         <div class="mb-3">
             <label class="form-label">Title:</label>
-            @error('name')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="title" >
         </div>
         <div class="mb-3">
             <label class="form-label">Thumbnail:</label>
-            @error('phone')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="thumbnail" >
         </div>
         <div class="mb-3">
             <label class="form-label">Author:</label>
-            @error('phone')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="author" >
         </div>
         <div class="mb-3">
             <label class="form-label">Publisher:</label>
-            @error('address')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="publisher">
         </div>
         <div class="mb-3">
             <label class="form-label">Publication:</label>
-            @error('address')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="date" class="form-control" name="publication">
         </div>
         <div class="mb-3">
             <label class="form-label">Price:</label>
-            @error('address')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="price">
         </div>
         <div class="mb-3">
             <label class="form-label">Quality:</label>
-            @error('address')
-            <p style="color: red">{{$message}}</p>
-            @enderror
+            
             <input type="text" class="form-control" name="quality">
         </div>
         <div class="mb-3">

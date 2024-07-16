@@ -51,7 +51,7 @@ class BookController extends Controller
     }
 
     
-    public function add_book(BookRequest $request){ 
+    public function add_book(Request $request){ 
         $title = "Them Sach Moi";
         $listCate = DB::table('categories')->get();
         if($request->isMethod('POST')){
@@ -65,11 +65,12 @@ class BookController extends Controller
     public function edit_book(Request $request,$id){
         $title = "Sua thong tin sach";
         $listCate = DB::table('categories')->get();
-        $bookDetail = DB::table('books')->join('categories','category_id', '=','categories.id')->where('books.id',$id)->first();
+        $bookDetail = DB::table('books')->where('id',$id)->first();
         if($request->isMethod('POST')){
-            BookModel::where('id',$id)->update();
+            $params = $request->except('_token');
+            $editbook =BookModel::where('id',$id)->update($params);
             Session::flash('success', 'Sua Sach thành công');
-            return redirect()->route('list-books');
+            return redirect()->route('edit-book',['id'=>$id]);
         }
         return view('books.edit',compact('title','bookDetail','listCate'));
     }
